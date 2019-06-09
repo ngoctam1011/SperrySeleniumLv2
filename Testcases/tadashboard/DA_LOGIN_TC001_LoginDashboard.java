@@ -19,8 +19,10 @@ public class DA_LOGIN_TC001_LoginDashboard extends BaseTest {
 		LoginPage loginPage= page.GetInstance(LoginPage.class);
 		HomePage homePage = loginPage.login(Constant.USERNAME, Constant.PASSWORD, Constant.REPO);
 		
-		LOG.info("Verify");
+		LOG.info("Verify: Repo display correctly");
 		homePage.checkRepoDisplay(repoName);
 		
+		LOG.info("Verify: Login User display correctly");
+		homePage.checkLoginUserDisplay(Constant.USERNAME);
 	}
 }
