@@ -1,0 +1,6 @@
+2019-06-08 23:31:35 INFO  BaseTest:37 - Open URL
+2019-06-08 23:31:36 INFO  DA_LOGIN_TC001_LoginDashboard:18 - Login with valid credential
+2019-06-08 23:31:38 INFO  DA_LOGIN_TC001_LoginDashboard:22 - Verify
+2019-06-08 23:31:38 INFO  BaseTest:86 - Wait for control By.xpath: //a[text()='abc']/span to be displayed with timeOut: 20
+2019-06-08 23:31:58 ERROR BaseTest:92 - Has error with control 'By.xpath: //a[text()='abc']/span': Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()='abc']/span (tried for 20 second(s) with 500 milliseconds interval)
+2019-06-08 23:31:58 ERROR BaseTest:134 - Error: Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()='abc']/span (tried for 20 second(s) with 500 milliseconds interval)

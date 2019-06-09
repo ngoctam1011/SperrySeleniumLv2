@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="12367" started-at="2019-06-09T14:43:15Z" finished-at="2019-06-09T14:43:27Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="12367" started-at="2019-06-09T14:43:15Z" finished-at="2019-06-09T14:43:27Z">
+      <class name="tadashboard.DA_LOGIN_TC001_LoginDashboard">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:tadashboard.DA_LOGIN_TC001_LoginDashboard@18eed359]" name="beforeTest" is-config="true" duration-ms="6006" started-at="2019-06-09T14:43:15Z" finished-at="2019-06-09T14:43:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHROME_LOCAL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tadashboard.DA_LOGIN_TC001_LoginDashboard@18eed359]" name="beforeMethod" is-config="true" duration-ms="2221" started-at="2019-06-09T14:43:21Z" finished-at="2019-06-09T14:43:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="Valid_Login()[pri:0, instance:tadashboard.DA_LOGIN_TC001_LoginDashboard@18eed359]" name="Valid_Login" duration-ms="2609" started-at="2019-06-09T14:43:23Z" description="Verify that user can login specific repository successfully via Dashboard login page with correct credentials" finished-at="2019-06-09T14:43:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Valid_Login -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:tadashboard.DA_LOGIN_TC001_LoginDashboard@18eed359]" name="teardown" is-config="true" duration-ms="1291" started-at="2019-06-09T14:43:26Z" finished-at="2019-06-09T14:43:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tadashboard.DA_LOGIN_TC001_LoginDashboard -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

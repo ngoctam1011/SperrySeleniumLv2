@@ -1,0 +1,4 @@
+2019-06-08 23:06:11 INFO  BaseTest:37 - Open URL
+2019-06-08 23:06:12 INFO  DA_LOGIN_TC001_LoginDashboard:18 - Login with valid credential
+2019-06-08 23:06:13 INFO  DA_LOGIN_TC001_LoginDashboard:22 - Verify
+2019-06-08 23:06:14 ERROR BaseTest:120 - ERROR

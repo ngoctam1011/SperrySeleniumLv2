@@ -1,0 +1,4 @@
+2019-06-08 23:38:05 INFO  BaseTest:37 - Open URL
+2019-06-08 23:38:06 INFO  DA_LOGIN_TC001_LoginDashboard:18 - Login with valid credential
+2019-06-08 23:38:07 INFO  DA_LOGIN_TC001_LoginDashboard:22 - Verify
+2019-06-08 23:38:07 INFO  BaseTest:99 - Wait for control [[ChromeDriver: chrome on XP (97095ba7f24496028e9763718f0d7618)] -> xpath: //a[text()='Repository: ']/span] to be displayed with timeOut: 20
