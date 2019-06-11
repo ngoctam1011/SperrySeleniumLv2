@@ -30,6 +30,7 @@ public abstract class AbstractDriverManager {
 	public void quitDriver() {
 		if (driver != null) {
 			driver.quit();
+			stopService();
 			driver = null;
 		}
 	}

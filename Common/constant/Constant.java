@@ -3,10 +3,10 @@ package constant;
 public class Constant {
 	
 	//******************************** SERVER **********************************************
-	public static final String HUB_SERVER = "http://192.168.212.1:4445/wd/hub";
+	public static final String HUB_SERVER = "http://192.168.172.246:4445/wd/hub";
 	
 	//******************************** PROJECT *********************************************
-	public static final String TA_DASHBOARD_URL = "http://localhost:54001/TADashboard";
+	public static final String TA_DASHBOARD_URL = "http://192.168.172.246:80/TADashboard";
 	public static final String REPO = "SampleRepository";
 	public static final String USERNAME = "administrator";
 	public static final String PASSWORD = "";

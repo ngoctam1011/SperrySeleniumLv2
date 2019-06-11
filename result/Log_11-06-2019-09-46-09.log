@@ -1,0 +1,6 @@
+2019-06-11 09:46:17 INFO  BaseTest:34 - Open URL
+2019-06-11 09:46:20 INFO  DA_LOGIN_TC001_LoginDashboard:19 - Login with valid credential
+2019-06-11 09:46:25 INFO  DA_LOGIN_TC001_LoginDashboard:23 - Verify: Repo display correctly
+2019-06-11 09:46:26 INFO  DA_LOGIN_TC001_LoginDashboard:26 - Verify: Login User display correctly
+2019-06-11 09:46:26 INFO  BaseTest:34 - Open URL
+2019-06-11 09:46:27 INFO  DA_LOGIN_TC001_LoginDashboard:33 - Login with invalid credential

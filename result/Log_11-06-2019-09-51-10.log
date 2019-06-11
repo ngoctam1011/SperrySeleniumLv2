@@ -1,0 +1,3 @@
+2019-06-11 09:51:17 INFO  BaseTest:34 - Open URL
+2019-06-11 09:51:18 INFO  DA_LOGIN_TC001_LoginDashboard:33 - Login with invalid credential
+2019-06-11 09:51:19 INFO  DA_LOGIN_TC001_LoginDashboard:36 - Verify: 'Username or password is invalid' message displays in alert
