@@ -46,6 +46,7 @@ public class NewTest {
         driver.get("http://testautomationguru.com");
         LOG.info("Verify");
         Assert.assertEquals("TestAutomationGuru – A technical blog on test automation", driver.getTitle());
+        LOG.info("Ending");
     }
 
    /*@Test
