@@ -1,0 +1,14 @@
+2019-06-11 09:26:59 INFO  BaseTest:37 - Open URL
+2019-06-11 09:26:59 INFO  BaseTest:37 - Open URL
+2019-06-11 09:27:04 INFO  DA_LOGIN_TC001_LoginDashboard:19 - Login with valid credential
+2019-06-11 09:27:06 INFO  DA_LOGIN_TC001_LoginDashboard:33 - Login with invalid credential
+2019-06-11 09:27:07 INFO  DA_LOGIN_TC001_LoginDashboard:36 - Verify: 'Username or password is invalid' message displays in alert
+2019-06-11 09:27:08 INFO  DA_LOGIN_TC001_LoginDashboard:23 - Verify: Repo display correctly
+2019-06-11 09:27:10 ERROR BaseTest:133 - Error: unexpected alert open: {Alert text : Username or password is invalid}
+  (Session info: chrome=75.0.3770.80): 
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LGVN12611', ip: '192.168.172.246', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.80, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\NGHIEP~1.TRU\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:61918}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 17d85723a10612f94f941d3fe057d0dc
+*** Element info: {Using=xpath, value=//a[text()='Repository: ']/span}

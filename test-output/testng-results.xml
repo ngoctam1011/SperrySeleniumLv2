@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="12367" started-at="2019-06-09T14:43:15Z" finished-at="2019-06-09T14:43:27Z">
+  <suite name="Suite" duration-ms="44479" started-at="2019-06-11T03:43:16Z" finished-at="2019-06-11T03:44:01Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="12367" started-at="2019-06-09T14:43:15Z" finished-at="2019-06-09T14:43:27Z">
+    <test name="Test" duration-ms="44479" started-at="2019-06-11T03:43:16Z" finished-at="2019-06-11T03:44:01Z">
       <class name="tadashboard.DA_LOGIN_TC001_LoginDashboard">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:tadashboard.DA_LOGIN_TC001_LoginDashboard@18eed359]" name="beforeTest" is-config="true" duration-ms="6006" started-at="2019-06-09T14:43:15Z" finished-at="2019-06-09T14:43:21Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:tadashboard.DA_LOGIN_TC001_LoginDashboard@6f1fba17]" name="beforeTest" is-config="true" duration-ms="31" started-at="2019-06-11T03:43:16Z" finished-at="2019-06-11T03:43:16Z">
           <params>
             <param index="0">
               <value>
@@ -18,18 +18,34 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tadashboard.DA_LOGIN_TC001_LoginDashboard@18eed359]" name="beforeMethod" is-config="true" duration-ms="2221" started-at="2019-06-09T14:43:21Z" finished-at="2019-06-09T14:43:23Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tadashboard.DA_LOGIN_TC001_LoginDashboard@6f1fba17]" name="beforeMethod" is-config="true" duration-ms="18772" started-at="2019-06-11T03:43:16Z" finished-at="2019-06-11T03:43:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="Valid_Login()[pri:0, instance:tadashboard.DA_LOGIN_TC001_LoginDashboard@18eed359]" name="Valid_Login" duration-ms="2609" started-at="2019-06-09T14:43:23Z" description="Verify that user can login specific repository successfully via Dashboard login page with correct credentials" finished-at="2019-06-09T14:43:26Z">
+        <test-method status="PASS" signature="Valid_Login()[pri:0, instance:tadashboard.DA_LOGIN_TC001_LoginDashboard@6f1fba17]" name="Valid_Login" duration-ms="8055" started-at="2019-06-11T03:43:35Z" description="Verify that user can login specific repository successfully via Dashboard login page with correct credentials" finished-at="2019-06-11T03:43:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Valid_Login -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:tadashboard.DA_LOGIN_TC001_LoginDashboard@18eed359]" name="teardown" is-config="true" duration-ms="1291" started-at="2019-06-09T14:43:26Z" finished-at="2019-06-09T14:43:27Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tadashboard.DA_LOGIN_TC001_LoginDashboard@6f1fba17]" name="afterMethod" is-config="true" duration-ms="1324" started-at="2019-06-11T03:43:43Z" finished-at="2019-06-11T03:43:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardown -->
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tadashboard.DA_LOGIN_TC001_LoginDashboard@6f1fba17]" name="beforeMethod" is-config="true" duration-ms="13512" started-at="2019-06-11T03:43:44Z" finished-at="2019-06-11T03:43:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="Login_Invalid_Credential()[pri:0, instance:tadashboard.DA_LOGIN_TC001_LoginDashboard@6f1fba17]" name="Login_Invalid_Credential" duration-ms="1939" started-at="2019-06-11T03:43:58Z" description="Verify that user fails to login specific repository successfully via Dashboard login page with incorrect credentials" finished-at="2019-06-11T03:44:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_Invalid_Credential -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tadashboard.DA_LOGIN_TC001_LoginDashboard@6f1fba17]" name="afterMethod" is-config="true" duration-ms="814" started-at="2019-06-11T03:44:00Z" finished-at="2019-06-11T03:44:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:tadashboard.DA_LOGIN_TC001_LoginDashboard@6f1fba17]" name="afterTest" is-config="true" duration-ms="0" started-at="2019-06-11T03:44:01Z" finished-at="2019-06-11T03:44:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
       </class> <!-- tadashboard.DA_LOGIN_TC001_LoginDashboard -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

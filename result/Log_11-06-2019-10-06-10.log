@@ -1,0 +1,7 @@
+2019-06-11 10:06:18 INFO  BaseTest:38 - Open URL
+2019-06-11 10:06:21 INFO  DA_LOGIN_TC001_LoginDashboard:19 - Login with valid credential
+2019-06-11 10:06:26 INFO  DA_LOGIN_TC001_LoginDashboard:23 - Verify: Repo display correctly
+2019-06-11 10:06:26 INFO  DA_LOGIN_TC001_LoginDashboard:26 - Verify: Login User display correctly
+2019-06-11 10:06:40 INFO  BaseTest:38 - Open URL
+2019-06-11 10:06:44 INFO  DA_LOGIN_TC001_LoginDashboard:33 - Login with invalid credential
+2019-06-11 10:06:45 INFO  DA_LOGIN_TC001_LoginDashboard:36 - Verify: 'Username or password is invalid' message displays in alert

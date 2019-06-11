@@ -1,0 +1,6 @@
+2019-06-10 10:26:00 INFO  BaseTest:37 - Open URL
+2019-06-10 10:26:07 INFO  DA_LOGIN_TC001_LoginDashboard:18 - Login with valid credential
+2019-06-10 10:26:15 INFO  DA_LOGIN_TC001_LoginDashboard:22 - Verify: Repo display correctly
+2019-06-10 10:26:15 INFO  BaseTest:99 - Wait for control Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Repository: ']/span' to be displayed with timeOut: 20
+2019-06-10 10:26:22 INFO  DA_LOGIN_TC001_LoginDashboard:25 - Verify: Login User display correctly
+2019-06-10 10:26:22 INFO  BaseTest:99 - Wait for control [[ChromeDriver: chrome on XP (72b4fa7ca580087d0941221877f8bf06)] -> xpath: //a[@href='#Welcome']] to be displayed with timeOut: 20

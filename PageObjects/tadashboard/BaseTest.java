@@ -18,21 +18,21 @@ public class BaseTest {
 	
 	AbstractDriverManager driverManager;
 	public WebDriver driver;
-    //public WebDriverWait wait;
     public PageGenerator page;
  
     @BeforeTest
     @Parameters("browser")
-    public void beforeTest(String browser) {
-        
-    	driverManager = DriverManagerFactory.getManager(DriverType.valueOf(browser.toUpperCase()));
-    	driver = driverManager.getDriver();
-        //wait = new WebDriverWait(driver,Constant.DRIVER_TIMEOUT);
- 
+    public void beforeTest(String browser) {     	
+    	System.setProperty("browser", browser);
     }
  
+    
     @BeforeMethod
+    
     public void beforeMethod () {
+    	String browser = System.getProperty("browser");
+    	driverManager = DriverManagerFactory.getManager(DriverType.valueOf(browser.toUpperCase()));
+    	driver = driverManager.getDriver();
         //Instantiate the Page Class
     	LOG.info("Open URL");
     	driver.get(Constant.TA_DASHBOARD_URL);
@@ -41,7 +41,13 @@ public class BaseTest {
     }
  
     @AfterMethod
-    public void teardown () {
+    public void afterMethod () {
     	driverManager.quitDriver();
     }
+    
+    @AfterTest
+    public void afterTest() {
+    	
+    }
+    
 }

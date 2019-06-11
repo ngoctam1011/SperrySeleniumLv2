@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -54,8 +55,7 @@ public class BasePage extends PageGenerator {
 
 	public WebElement waitForPresent(By locator, int timeOutInSeconds) throws Exception {
 		WebElement element = null;
-		LOG.info(String.format("Wait for control %s to be present in DOM with timeOut %s", locator.toString(),
-				timeOutInSeconds));
+		//LOG.info(String.format("Wait for control %s to be present in DOM with timeOut %s", locator.toString(),timeOutInSeconds));
 		try {
 			WebDriverWait wait = new WebDriverWait(this.driver, timeOutInSeconds);
 			element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
@@ -68,8 +68,7 @@ public class BasePage extends PageGenerator {
 
 	public List<WebElement> waitForAllElementsPresent(By locator, int timeOutInSeconds) throws Exception {
 		List<WebElement> elements = null;
-		LOG.info(String.format("Wait for all controls %s to be present in DOM with timeOut %s", locator.toString(),
-				timeOutInSeconds));
+		//LOG.info(String.format("Wait for all controls %s to be present in DOM with timeOut %s", locator.toString(),timeOutInSeconds));
 		try {
 			WebDriverWait wait = new WebDriverWait(this.driver, timeOutInSeconds);
 			elements = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
@@ -83,8 +82,7 @@ public class BasePage extends PageGenerator {
 	private WebElement waitForDisplayUsingByLocator(By locator, int timeOutInSeconds) throws Exception {
 		WebElement element = null;
 		try {
-			LOG.info(String.format("Wait for control %s to be displayed with timeOut: %s", locator.toString(),
-					timeOutInSeconds));
+			//LOG.info(String.format("Wait for control %s to be displayed with timeOut: %s", locator.toString(),timeOutInSeconds));
 			WebDriverWait wait = new WebDriverWait(this.driver, timeOutInSeconds);
 			element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		} catch (Exception error) {
@@ -96,8 +94,7 @@ public class BasePage extends PageGenerator {
 	}
 
 	private WebElement waitUntilElementDisplayed(final WebElement webElement, int timeOutInSeconds) throws Exception {
-		LOG.info(String.format("Wait for control %s to be displayed with timeOut: %s", webElement.toString(),
-				timeOutInSeconds));
+		//LOG.info(String.format("Wait for control %s to be displayed with timeOut: %s", webElement.toString(),timeOutInSeconds));
 		driver.manage().timeouts().implicitlyWait(500, TimeUnit.MILLISECONDS);
 		WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
 		ExpectedCondition<Boolean> elementIsDisplayed = new ExpectedCondition<Boolean>() {
@@ -112,23 +109,23 @@ public class BasePage extends PageGenerator {
 				}
 			}
 		};
-		
+
 		wait.until(elementIsDisplayed);
-		
+
 		try {
 			webElement.isDisplayed();
 			return webElement;
-		} catch(Exception error) {
+		} catch (Exception error) {
 			error.printStackTrace();
 			LOG.error("ERROR: " + error.getMessage());
 			throw error;
 		}
 	}
-	
+
 	public <T> WebElement waitForDisplay(T elementAttr, int timeOutInSeconds) throws Exception {
 		try {
 			if (elementAttr.getClass().getName().contains("By")) {
-				return waitForDisplayUsingByLocator((By) elementAttr,timeOutInSeconds);
+				return waitForDisplayUsingByLocator((By) elementAttr, timeOutInSeconds);
 			} else {
 				return waitUntilElementDisplayed((WebElement) elementAttr, timeOutInSeconds);
 			}
@@ -140,7 +137,7 @@ public class BasePage extends PageGenerator {
 
 	public void waitForInvisibility(By locator, int timeOutInSeconds) throws Exception {
 		try {
-			LOG.info(String.format("Wait for control %s to be invisibled", locator.toString()));
+			//LOG.info(String.format("Wait for control %s to be invisibled", locator.toString()));
 			WebDriverWait wait = new WebDriverWait(this.driver, timeOutInSeconds);
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
 		} catch (Exception error) {
@@ -152,7 +149,7 @@ public class BasePage extends PageGenerator {
 	public List<WebElement> waitForAllElementsDisplay(By locator, int timeOutInSeconds) throws Exception {
 		List<WebElement> elements = null;
 		try {
-			LOG.info(String.format("Wait for all controls %s to be visibled", locator.toString()));
+			//LOG.info(String.format("Wait for all controls %s to be visibled", locator.toString()));
 			WebDriverWait wait = new WebDriverWait(this.driver, timeOutInSeconds);
 			elements = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
 		} catch (Exception error) {
@@ -165,7 +162,7 @@ public class BasePage extends PageGenerator {
 	public WebElement waitForClickable(By locator, int timeOutInSeconds) throws Exception {
 		WebElement element = null;
 		try {
-			LOG.info(String.format("Wait for control %s to be clickabled", locator.toString()));
+			//LOG.info(String.format("Wait for control %s to be clickabled", locator.toString()));
 			WebDriverWait wait = new WebDriverWait(this.driver, timeOutInSeconds);
 			element = wait.until(ExpectedConditions.elementToBeClickable(locator));
 		} catch (Exception error) {
@@ -208,6 +205,43 @@ public class BasePage extends PageGenerator {
 		} else {
 			((Select) elementAttr).selectByValue(value);
 		}
+	}
+
+	public boolean isAlertPresent(int timeOutInSeconds) {
+		WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+		try {
+			wait.until(ExpectedConditions.alertIsPresent());
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+
+	public Alert waitForAlert(int timeOutInSeconds) {
+		WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+		return wait.until(ExpectedConditions.alertIsPresent());
+	}
+
+	public void clickOkInAlert(int timeOutInSeconds) {
+
+		waitForAlert(timeOutInSeconds).accept();
+	}
+
+	public void clickCancelInAlert(int timeOutInSeconds) {
+
+		waitForAlert(timeOutInSeconds).dismiss();
+	}
+
+	public void promptInputPressOK(String inputMessage, int timeOutInSeconds) {
+		Alert alert = waitForAlert(timeOutInSeconds);
+		alert.sendKeys(inputMessage);
+		alert.accept();
+
+	}
+
+	public String getAlertMessage(int timeOutInSeconds) {
+		Alert alert = waitForAlert(timeOutInSeconds);
+		return alert.getText();
 	}
 
 	// Close popup if exists
